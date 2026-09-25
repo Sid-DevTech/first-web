@@ -575,7 +575,7 @@ with st.sidebar:
 
 st.title("Aero Destination Dashboard", icon=":material/flight:")
 st.caption("Your Personal Trip Assistant")
-st.set_page_config(page_title="Aero Travel Dashboard", page_icon="✈️", layout="wide")
+st.set_page_config(page_title="Aero Travel", page_icon="✈️", layout="wide")
 hover_ui()
 mainscreen_ui()
 metric_ui()
@@ -594,7 +594,7 @@ with col4:
 col1,col2 = st.columns([1,1],gap="medium")
 pages_ui()
 with col1:
-    st.page_link("travel_assistant.py", label="View Full Itinerary", icon=":material/map:",use_container_width=True)
+    st.page_link("main.py", label="View Full Itinerary", icon=":material/map:",use_container_width=True)
 with col2:
     raw_itinerary= st.session_state.get("itinerary_response")
     itinerary_text= raw_itinerary if raw_itinerary else "No Itinerary Generated yet"
