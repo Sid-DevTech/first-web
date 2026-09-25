@@ -1,4 +1,4 @@
 streamlit
-google-gemini
+google-genai
 python-dotenv
 urllib.parse
