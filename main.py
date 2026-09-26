@@ -517,7 +517,7 @@ def feedback_message():
         });
     })();
     </script>
-""", unsafe_allow_html=True)
+""", unsafe_allow_html=True)    
 
 def pages_ui():
     st.markdown("""
