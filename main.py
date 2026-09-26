@@ -612,13 +612,6 @@ with col4:
 col1,col2 = st.columns([1,1],gap="medium")
 pages_ui()
 with col1:
-    view_itinerary = st.page_link(
-    "main.py",
-    label="View Full Itinerary",
-    icon=":material/map:",
-    use_container_width=True
-)
-with col2:
     raw_itinerary= st.session_state.get("itinerary_response")
     itinerary_text= raw_itinerary if raw_itinerary else "No Itinerary Generated yet"
     location_name= st.session_state.get("locations_data") or "trip"
@@ -630,6 +623,9 @@ with col2:
     use_container_width=True)
     disabled= (not raw_itinerary)
 st.divider()
+    
+
+    
 
 prompt = f"""
 You are an expert, date-conscious travel planner. Plan a detailed {days_number}-day trip to {location} for {trip_plan}.
