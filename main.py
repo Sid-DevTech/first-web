@@ -594,7 +594,12 @@ with col4:
 col1,col2 = st.columns([1,1],gap="medium")
 pages_ui()
 with col1:
-    st.page="main.py", label="View Full Itinerary", icon=":material/map:",use_container_width=True)
+    view_itinerary = st.Page(
+    page="main.py",
+    title="View Full Itinerary",
+    icon=":material/map:",
+    default=True
+)
 with col2:
     raw_itinerary= st.session_state.get("itinerary_response")
     itinerary_text= raw_itinerary if raw_itinerary else "No Itinerary Generated yet"
